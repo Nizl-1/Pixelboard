@@ -40,3 +40,33 @@
 - HW-504 typically outputs analog values (0–4095 on ESP32 ADC)
 - DHT22 requires a pull-up resistor (usually 10kΩ) on data line
 - Consider power: 64 LEDs at full brightness can draw significant current — external 5V supply may be needed
+
+
+
+# Critical ESP32 Pins
+
+## WiFi Restriction
+When WiFi is used: the **ADC2 block** does not work:
+`GPIO 25, 26, 27, 14, 12, 13, 4, 0, 2, 15`
+
+## Unusable Pins
+- **GPIO 6–11** are not usable (used internally by the flash memory)
+
+## Input-Only Pins
+- **GPIO 34–39** are input-only, no internal pull-up/pull-down resistors
+
+## Boot Behavior
+- **GPIO 0, 1, 3, 5, 14, 15** are briefly set to HIGH during boot
+- **GPIO 1 and 3** must not be used (required for program upload / UART)
+- **GPIO 0, 2, 4, 5, 12, 15**: if a load pulls these pins HIGH or LOW during boot, unexpected behavior can occur
+
+## Joystick Recommendation
+The ADC2 block and its associated pins are used by the WiFi module.
+For the joystick, use **ADC1** pins instead, e.g.:
+- **GPIO 32** -> Button
+- **GPIO 34** -> X
+- **GPIO 35** -> Y
+
+## WARNING: Mislabeled Pin on Some 36-Pin Boards
+On some ESP32 boards with 36 pins, the pin between "5V" and "SD3"/"GPIO 11"
+is incorrectly labeled **"GND"**. The correct label is **"CMD"**.
