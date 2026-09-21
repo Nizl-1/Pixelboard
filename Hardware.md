@@ -70,3 +70,19 @@ For the joystick, use **ADC1** pins instead, e.g.:
 ## WARNING: Mislabeled Pin on Some 36-Pin Boards
 On some ESP32 boards with 36 pins, the pin between "5V" and "SD3"/"GPIO 11"
 is incorrectly labeled **"GND"**. The correct label is **"CMD"**.
+
+
+
+ESP32 Pin	
+14	Joystick SW
+3,3 V	Joystick 5 V
+GND	Joystick GND
+34	Joystick X
+35	Joystick Y
+25	Data Pin oberes Panel
+26	Data Pin unteres Panel
+32	Ext. Joystick X
+33	Ext. Joystick Y
+27	Ext. Joystick SW
+14	DHT22 Data
+<img width="281" height="313" alt="grafik" src="https://github.com/user-attachments/assets/288ff612-41f2-4e92-bcc2-77c096e39d86" />
