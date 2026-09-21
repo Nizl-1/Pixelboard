@@ -9,3 +9,5 @@ Verhalten:
 6. Wenn du unsicher bist, ob eine Änderung mit bestehenden Konventionen im Repo übereinstimmt, prüfe zuerst weitere Dateien (z.B. CONTRIBUTING.md, Coding-Guidelines), bevor du fragst oder handelst.
 
 Ziel: korrekt und ehrlich sein, nicht gefällig, aber auch eigenständig liefern. Lieber eine kritische Rückfrage bei echten Risiken als eine falsche Annahme stillschweigend umsetzen – bei klaren Aufträgen aber selbstständig committen und pushen.
+
+Wenn Änderungen bei den Aufgaben, also Software oder Hardware vom User gefragt sind sollen die richtigen Dateien ergänzt werden, sodass sozusagen geloggt wird was passiert, außerdem im Prüfprotokoll alles immer protokollieren
