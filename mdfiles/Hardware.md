@@ -5,7 +5,7 @@
 ### LED Displays
 - **2x Adafruit LED Matrix**
   - Dimensions: 8 (height) × 32 (length)
-  - Total: 8×64 pixels (side by side)
+  - Total: 16x64 pixels (side by side)
 
 ### Microcontroller
 - **ESP32** with USB Micro
